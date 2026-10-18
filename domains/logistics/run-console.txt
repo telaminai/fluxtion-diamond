@@ -1,0 +1,5 @@
+input=12  dispatch=16  dispatch ran 1 time(s) for this event
+input=18  dispatch=19  dispatch ran 1 time(s) for this event
+input=18  dispatch=19  dispatch ran 0 time(s) for this event
+input=30  dispatch=35  dispatch ran 1 time(s) for this event
+6 audit records -> logistics-audit.yaml

@@ -3,6 +3,7 @@
 # in ~/.fluxtion/fluxtion.apiKeyFile, which the plugin reads itself):
 #   DiamondProcessor        from the Java builder  (builder/DiamondBuilder.java,  profile regen)
 #   DiamondSpringProcessor  from the Spring XML    (src/main/spring/diamond.xml, profile regen-spring)
+#   <Domain>Processor       from each domain variant's builder (domain/<domain>/builder, profile regen)
 # then replace the generator's own licence header with a neutral one and drop the duplicate source copies.
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
@@ -11,7 +12,11 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 python3 - <<'PY'
 import pathlib, re
 sources = {"DiamondProcessor.java": "builder.DiamondBuilder",
-           "DiamondSpringProcessor.java": "src/main/spring/diamond.xml"}
+           "DiamondSpringProcessor.java": "src/main/spring/diamond.xml",
+           "MathematicsProcessor.java": "domain.mathematics.builder.MathematicsBuilder",
+           "AccountingProcessor.java": "domain.accounting.builder.AccountingBuilder",
+           "LogisticsProcessor.java": "domain.logistics.builder.LogisticsBuilder",
+           "TradingProcessor.java": "domain.trading.builder.TradingBuilder"}
 for name, origin in sources.items():
     neutral = (f"/*\n * Generated source: Fluxtion AOT compiler output for {origin} (DEMO project).\n"
                " * Do not edit by hand; regenerate with ./regen.sh (needs a Fluxtion API key).\n */\n")
@@ -21,6 +26,7 @@ for name, origin in sources.items():
         s = re.sub(r"\n \*\n \* @author [^\n]*\n", "\n", s)
         p.write_text(s)
 PY
-find src/main/resources -name 'Diamond*Processor.java' -delete
+find src/main/resources -name '*Processor.java' -delete
 ./mvnw -q -B package
 echo "regenerated: src/main/java/com/acme/diamond/generated/{DiamondProcessor,spring/DiamondSpringProcessor}.java"
+echo "             src/main/java/com/acme/diamond/domain/*/generated/*Processor.java"

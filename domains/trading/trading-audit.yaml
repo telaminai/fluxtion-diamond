@@ -1,0 +1,78 @@
+---
+eventLogRecord: 
+    eventTime: -1
+    logTime: 1792329245545
+    groupingId: null
+    event: EventLogControlEvent
+    eventToString: EventLogConfig{level=null, logRecordProcessor=YamlAuditFile, sourceId=null, groupId=null}
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245545
+---
+eventLogRecord: 
+    eventTime: 1792329245545
+    logTime: 1792329245545
+    groupingId: null
+    event: LifecycleEvent
+    eventToString: Init
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245546
+---
+eventLogRecord: 
+    eventTime: 1792329245546
+    logTime: 1792329245546
+    groupingId: null
+    event: Trade
+    eventToString: Trade[price=98]
+    thread: main
+    nodeLogs: 
+        - trade: { thread: main, method: onTrade, annotation: OnEventHandler, price: 98, changed: true}
+        - pnl: { thread: main, method: recalculate, annotation: OnTrigger, price: 98, pnl: -20, changed: true}
+        - position: { thread: main, method: recalculate, annotation: OnTrigger, price: 98, quantity: 10, marketValue: 980, changed: true}
+        - risk: { thread: main, method: recalculate, annotation: OnTrigger, marketValue: 980, pnl: -20, margin: 216, invocations: 1}
+    endTime: 1792329245551
+---
+eventLogRecord: 
+    eventTime: 1792329245556
+    logTime: 1792329245556
+    groupingId: null
+    event: Trade
+    eventToString: Trade[price=103]
+    thread: main
+    nodeLogs: 
+        - trade: { thread: main, method: onTrade, annotation: OnEventHandler, price: 103, changed: true}
+        - pnl: { thread: main, method: recalculate, annotation: OnTrigger, price: 103, pnl: 30, changed: true}
+        - position: { thread: main, method: recalculate, annotation: OnTrigger, price: 103, quantity: 10, marketValue: 1030, changed: true}
+        - risk: { thread: main, method: recalculate, annotation: OnTrigger, marketValue: 1030, pnl: 30, margin: 206, invocations: 2}
+    endTime: 1792329245556
+---
+eventLogRecord: 
+    eventTime: 1792329245556
+    logTime: 1792329245556
+    groupingId: null
+    event: Trade
+    eventToString: Trade[price=103]
+    thread: main
+    nodeLogs: 
+        - trade: { thread: main, method: onTrade, annotation: OnEventHandler, price: 103, changed: false}
+    endTime: 1792329245556
+---
+eventLogRecord: 
+    eventTime: 1792329245556
+    logTime: 1792329245556
+    groupingId: null
+    event: Trade
+    eventToString: Trade[price=101]
+    thread: main
+    nodeLogs: 
+        - trade: { thread: main, method: onTrade, annotation: OnEventHandler, price: 101, changed: true}
+        - pnl: { thread: main, method: recalculate, annotation: OnTrigger, price: 101, pnl: 10, changed: true}
+        - position: { thread: main, method: recalculate, annotation: OnTrigger, price: 101, quantity: 10, marketValue: 1010, changed: true}
+        - risk: { thread: main, method: recalculate, annotation: OnTrigger, marketValue: 1010, pnl: 10, margin: 202, invocations: 3}
+    endTime: 1792329245556
+---
+eventLogRecord:
+  streamEnd: normal
+  streamEndRecords: 6
+---

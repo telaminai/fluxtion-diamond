@@ -1,0 +1,5 @@
+input=4  recombination=4  recombination ran 1 time(s) for this event
+input=5  recombination=5  recombination ran 1 time(s) for this event
+input=5  recombination=5  recombination ran 0 time(s) for this event
+input=7  recombination=7  recombination ran 1 time(s) for this event
+6 audit records -> mathematics-audit.yaml

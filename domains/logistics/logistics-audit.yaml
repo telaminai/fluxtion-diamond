@@ -1,0 +1,78 @@
+---
+eventLogRecord: 
+    eventTime: -1
+    logTime: 1792329245468
+    groupingId: null
+    event: EventLogControlEvent
+    eventToString: EventLogConfig{level=null, logRecordProcessor=YamlAuditFile, sourceId=null, groupId=null}
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245468
+---
+eventLogRecord: 
+    eventTime: 1792329245468
+    logTime: 1792329245468
+    groupingId: null
+    event: LifecycleEvent
+    eventToString: Init
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245468
+---
+eventLogRecord: 
+    eventTime: 1792329245468
+    logTime: 1792329245468
+    groupingId: null
+    event: Order
+    eventToString: Order[items=12]
+    thread: main
+    nodeLogs: 
+        - order: { thread: main, method: onOrder, annotation: OnEventHandler, items: 12, changed: true}
+        - pack: { thread: main, method: recalculate, annotation: OnTrigger, items: 12, cartons: 2, changed: true}
+        - pick: { thread: main, method: recalculate, annotation: OnTrigger, items: 12, trips: 1, changed: true}
+        - dispatch: { thread: main, method: recalculate, annotation: OnTrigger, trips: 1, cartons: 2, minutes: 16, invocations: 1}
+    endTime: 1792329245474
+---
+eventLogRecord: 
+    eventTime: 1792329245479
+    logTime: 1792329245479
+    groupingId: null
+    event: Order
+    eventToString: Order[items=18]
+    thread: main
+    nodeLogs: 
+        - order: { thread: main, method: onOrder, annotation: OnEventHandler, items: 18, changed: true}
+        - pack: { thread: main, method: recalculate, annotation: OnTrigger, items: 18, cartons: 3, changed: true}
+        - pick: { thread: main, method: recalculate, annotation: OnTrigger, items: 18, trips: 1, changed: false}
+        - dispatch: { thread: main, method: recalculate, annotation: OnTrigger, trips: 1, cartons: 3, minutes: 19, invocations: 2}
+    endTime: 1792329245479
+---
+eventLogRecord: 
+    eventTime: 1792329245479
+    logTime: 1792329245479
+    groupingId: null
+    event: Order
+    eventToString: Order[items=18]
+    thread: main
+    nodeLogs: 
+        - order: { thread: main, method: onOrder, annotation: OnEventHandler, items: 18, changed: false}
+    endTime: 1792329245479
+---
+eventLogRecord: 
+    eventTime: 1792329245479
+    logTime: 1792329245479
+    groupingId: null
+    event: Order
+    eventToString: Order[items=30]
+    thread: main
+    nodeLogs: 
+        - order: { thread: main, method: onOrder, annotation: OnEventHandler, items: 30, changed: true}
+        - pack: { thread: main, method: recalculate, annotation: OnTrigger, items: 30, cartons: 5, changed: true}
+        - pick: { thread: main, method: recalculate, annotation: OnTrigger, items: 30, trips: 2, changed: true}
+        - dispatch: { thread: main, method: recalculate, annotation: OnTrigger, trips: 2, cartons: 5, minutes: 35, invocations: 3}
+    endTime: 1792329245479
+---
+eventLogRecord:
+  streamEnd: normal
+  streamEndRecords: 6
+---

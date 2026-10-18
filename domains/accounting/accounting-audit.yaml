@@ -1,0 +1,78 @@
+---
+eventLogRecord: 
+    eventTime: -1
+    logTime: 1792329245391
+    groupingId: null
+    event: EventLogControlEvent
+    eventToString: EventLogConfig{level=null, logRecordProcessor=YamlAuditFile, sourceId=null, groupId=null}
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245391
+---
+eventLogRecord: 
+    eventTime: 1792329245391
+    logTime: 1792329245391
+    groupingId: null
+    event: LifecycleEvent
+    eventToString: Init
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245391
+---
+eventLogRecord: 
+    eventTime: 1792329245391
+    logTime: 1792329245391
+    groupingId: null
+    event: InvoiceLine
+    eventToString: InvoiceLine[net=400]
+    thread: main
+    nodeLogs: 
+        - line: { thread: main, method: onInvoiceLine, annotation: OnEventHandler, net: 400, changed: true}
+        - discount: { thread: main, method: recalculate, annotation: OnTrigger, net: 400, discount: 0, changed: false}
+        - tax: { thread: main, method: recalculate, annotation: OnTrigger, net: 400, tax: 80, gross: 480, changed: true}
+        - total: { thread: main, method: recalculate, annotation: OnTrigger, gross: 480, discount: 0, total: 480, invocations: 1}
+    endTime: 1792329245397
+---
+eventLogRecord: 
+    eventTime: 1792329245402
+    logTime: 1792329245402
+    groupingId: null
+    event: InvoiceLine
+    eventToString: InvoiceLine[net=600]
+    thread: main
+    nodeLogs: 
+        - line: { thread: main, method: onInvoiceLine, annotation: OnEventHandler, net: 600, changed: true}
+        - discount: { thread: main, method: recalculate, annotation: OnTrigger, net: 600, discount: 0, changed: false}
+        - tax: { thread: main, method: recalculate, annotation: OnTrigger, net: 600, tax: 120, gross: 720, changed: true}
+        - total: { thread: main, method: recalculate, annotation: OnTrigger, gross: 720, discount: 0, total: 720, invocations: 2}
+    endTime: 1792329245402
+---
+eventLogRecord: 
+    eventTime: 1792329245402
+    logTime: 1792329245402
+    groupingId: null
+    event: InvoiceLine
+    eventToString: InvoiceLine[net=600]
+    thread: main
+    nodeLogs: 
+        - line: { thread: main, method: onInvoiceLine, annotation: OnEventHandler, net: 600, changed: false}
+    endTime: 1792329245402
+---
+eventLogRecord: 
+    eventTime: 1792329245402
+    logTime: 1792329245402
+    groupingId: null
+    event: InvoiceLine
+    eventToString: InvoiceLine[net=1200]
+    thread: main
+    nodeLogs: 
+        - line: { thread: main, method: onInvoiceLine, annotation: OnEventHandler, net: 1200, changed: true}
+        - discount: { thread: main, method: recalculate, annotation: OnTrigger, net: 1200, discount: 120, changed: true}
+        - tax: { thread: main, method: recalculate, annotation: OnTrigger, net: 1200, tax: 240, gross: 1440, changed: true}
+        - total: { thread: main, method: recalculate, annotation: OnTrigger, gross: 1440, discount: 120, total: 1320, invocations: 3}
+    endTime: 1792329245402
+---
+eventLogRecord:
+  streamEnd: normal
+  streamEndRecords: 6
+---
