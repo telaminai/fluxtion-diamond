@@ -1,0 +1,5 @@
+input=400  total=480  total ran 1 time(s) for this event
+input=600  total=720  total ran 1 time(s) for this event
+input=600  total=720  total ran 0 time(s) for this event
+input=1200  total=1320  total ran 1 time(s) for this event
+6 audit records -> accounting-audit.yaml

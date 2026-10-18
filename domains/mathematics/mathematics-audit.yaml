@@ -1,0 +1,78 @@
+---
+eventLogRecord: 
+    eventTime: -1
+    logTime: 1792329245311
+    groupingId: null
+    event: EventLogControlEvent
+    eventToString: EventLogConfig{level=null, logRecordProcessor=YamlAuditFile, sourceId=null, groupId=null}
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245312
+---
+eventLogRecord: 
+    eventTime: 1792329245312
+    logTime: 1792329245312
+    groupingId: null
+    event: LifecycleEvent
+    eventToString: Init
+    thread: main
+    nodeLogs: 
+    endTime: 1792329245312
+---
+eventLogRecord: 
+    eventTime: 1792329245312
+    logTime: 1792329245312
+    groupingId: null
+    event: Operand
+    eventToString: Operand[value=4]
+    thread: main
+    nodeLogs: 
+        - dividend: { thread: main, method: onOperand, annotation: OnEventHandler, n: 4, value: 4, changed: true}
+        - quotient: { thread: main, method: recalculate, annotation: OnTrigger, n: 4, value: 1, changed: true}
+        - remainder: { thread: main, method: recalculate, annotation: OnTrigger, n: 4, value: 1, changed: true}
+        - recombination: { thread: main, method: recalculate, annotation: OnTrigger, quotient: 1, remainder: 1, value: 4, invocations: 1}
+    endTime: 1792329245318
+---
+eventLogRecord: 
+    eventTime: 1792329245323
+    logTime: 1792329245323
+    groupingId: null
+    event: Operand
+    eventToString: Operand[value=5]
+    thread: main
+    nodeLogs: 
+        - dividend: { thread: main, method: onOperand, annotation: OnEventHandler, n: 5, value: 5, changed: true}
+        - quotient: { thread: main, method: recalculate, annotation: OnTrigger, n: 5, value: 1, changed: false}
+        - remainder: { thread: main, method: recalculate, annotation: OnTrigger, n: 5, value: 2, changed: true}
+        - recombination: { thread: main, method: recalculate, annotation: OnTrigger, quotient: 1, remainder: 2, value: 5, invocations: 2}
+    endTime: 1792329245323
+---
+eventLogRecord: 
+    eventTime: 1792329245323
+    logTime: 1792329245323
+    groupingId: null
+    event: Operand
+    eventToString: Operand[value=5]
+    thread: main
+    nodeLogs: 
+        - dividend: { thread: main, method: onOperand, annotation: OnEventHandler, n: 5, value: 5, changed: false}
+    endTime: 1792329245323
+---
+eventLogRecord: 
+    eventTime: 1792329245323
+    logTime: 1792329245323
+    groupingId: null
+    event: Operand
+    eventToString: Operand[value=7]
+    thread: main
+    nodeLogs: 
+        - dividend: { thread: main, method: onOperand, annotation: OnEventHandler, n: 7, value: 7, changed: true}
+        - quotient: { thread: main, method: recalculate, annotation: OnTrigger, n: 7, value: 2, changed: true}
+        - remainder: { thread: main, method: recalculate, annotation: OnTrigger, n: 7, value: 1, changed: true}
+        - recombination: { thread: main, method: recalculate, annotation: OnTrigger, quotient: 2, remainder: 1, value: 7, invocations: 3}
+    endTime: 1792329245323
+---
+eventLogRecord:
+  streamEnd: normal
+  streamEndRecords: 6
+---
