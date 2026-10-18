@@ -1,0 +1,77 @@
+---
+eventLogRecord: 
+    eventTime: -1
+    logTime: 1792330002541
+    groupingId: null
+    event: EventLogControlEvent
+    eventToString: EventLogConfig{level=null, logRecordProcessor=YamlAuditFile, sourceId=null, groupId=null}
+    thread: main
+    nodeLogs: 
+    endTime: 1792330002541
+---
+eventLogRecord: 
+    eventTime: 1792330002542
+    logTime: 1792330002542
+    groupingId: null
+    event: LifecycleEvent
+    eventToString: Init
+    thread: main
+    nodeLogs: 
+    endTime: 1792330002542
+---
+eventLogRecord: 
+    eventTime: 1792330002542
+    logTime: 1792330002542
+    groupingId: null
+    event: X
+    eventToString: X[value=2]
+    thread: main
+    nodeLogs: 
+        - a: { thread: main, method: onX, annotation: OnEventHandler, x: 2, value: 2, changed: true}
+        - b: { thread: main, method: recalculate, annotation: OnTrigger, a: 2, value: 1, changed: true}
+        - c: { thread: main, method: recalculate, annotation: OnTrigger, a: 2, value: 6, changed: false}
+        - d: { thread: main, method: recalculate, annotation: OnTrigger, b: 1, c: 6, value: 106, invocations: 1}
+    endTime: 1792330002548
+---
+eventLogRecord: 
+    eventTime: 1792330002553
+    logTime: 1792330002553
+    groupingId: null
+    event: X
+    eventToString: X[value=3]
+    thread: main
+    nodeLogs: 
+        - a: { thread: main, method: onX, annotation: OnEventHandler, x: 3, value: 3, changed: true}
+        - b: { thread: main, method: recalculate, annotation: OnTrigger, a: 3, value: 1, changed: false}
+        - c: { thread: main, method: recalculate, annotation: OnTrigger, a: 3, value: 9, changed: false}
+    endTime: 1792330002553
+---
+eventLogRecord: 
+    eventTime: 1792330002553
+    logTime: 1792330002553
+    groupingId: null
+    event: X
+    eventToString: X[value=3]
+    thread: main
+    nodeLogs: 
+        - a: { thread: main, method: onX, annotation: OnEventHandler, x: 3, value: 3, changed: false}
+    endTime: 1792330002553
+---
+eventLogRecord: 
+    eventTime: 1792330002553
+    logTime: 1792330002553
+    groupingId: null
+    event: X
+    eventToString: X[value=4]
+    thread: main
+    nodeLogs: 
+        - a: { thread: main, method: onX, annotation: OnEventHandler, x: 4, value: 4, changed: true}
+        - b: { thread: main, method: recalculate, annotation: OnTrigger, a: 4, value: 2, changed: true}
+        - c: { thread: main, method: recalculate, annotation: OnTrigger, a: 4, value: 12, changed: false}
+        - d: { thread: main, method: recalculate, annotation: OnTrigger, b: 2, c: 12, value: 212, invocations: 2}
+    endTime: 1792330002553
+---
+eventLogRecord:
+  streamEnd: normal
+  streamEndRecords: 6
+---

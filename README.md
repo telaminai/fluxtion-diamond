@@ -1,5 +1,11 @@
 # fluxtion-diamond
 
+> **Branch `teaching/broken-diamond`: deliberately broken, for teaching.** One commit on top of `main` plants a
+> small bug in one node class. `teaching/broken-diamond-audit.yaml` (with `teaching/run-console.txt`) is a real,
+> unedited run of this commit through the committed generated processor; the GraphML is unchanged from `main`,
+> because regenerating produced identical dispatch code. `DiamondTest` fails on this branch, which is correct:
+> build with `./mvnw package -DskipTests`. `main` is the working diamond.
+
 A four-node Fluxtion graph, small enough to read in one sitting, built to be opened in the Fluxtion audit log
 analyser. It is the teaching example the analyser's *Fluxtion philosophy* prompt packs refer to.
 

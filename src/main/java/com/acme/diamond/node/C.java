@@ -15,8 +15,8 @@ public class C extends EventLogNode {
     @OnTrigger
     public boolean recalculate() {
         int next = 3 * a.value();
-        boolean changed = next != value;
         value = next;
+        boolean changed = next != value;
         auditLog.info("a", a.value()).info("value", value).info("changed", changed);
         return changed;
     }
